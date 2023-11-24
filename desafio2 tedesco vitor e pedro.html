@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts de Página com Imagens</title>
+
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Define a fonte do texto */
+            background-color: #f0f0f0; /* Cor de fundo do corpo da página */
+            margin: 0; /* Remove margens padrão do corpo da página */
+            padding: 0; /* Remove preenchimento padrão do corpo da página */
+        }
+    
+        /* Estilo para o layout de um menu de restaurante */
+        #menuTable {
+            width: 70%; /* Largura da tabela de menu */
+            margin: 20px auto; /* Centraliza a tabela na página e define margens */
+            background-color: #fff; /* Cor de fundo branca para a tabela */
+            border-radius: 8px; /* Borda arredondada na tabela */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave na tabela */
+        }
+    
+        #menuTable th, #menuTable td {
+            padding: 15px; /* Preenchimento interno das células da tabela */
+            text-align: left; /* Alinhamento do texto à esquerda nas células */
+        }
+    
+        #menuTable th {
+            background-color: #4CAF50; /* Cor de fundo verde para cabeçalho da tabela */
+            color: white; /* Cor do texto branco para cabeçalho da tabela */
+            border-radius: 8px 8px 0 0; /* Borda arredondada no topo do cabeçalho */
+        }
+    
+        #menuTable td {
+            border-bottom: 1px solid #ddd; /* Linha de borda inferior nas células da tabela */
+        }
+    
+        #menuTable img {
+            max-width: 50px; /* Largura máxima da imagem dentro da tabela */
+            max-height: 50px; /* Altura máxima da imagem dentro da tabela */
+            border-radius: 50%; /* Borda arredondada para a imagem */
+            margin-right: 10px; /* Espaçamento à direita da imagem */
+        }
+    
+        /* Estilo para o layout de uma tabela de preços de produtos */
+        #priceTable {
+            width: 80%; /* Largura da tabela de preços */
+            margin: 20px auto; /* Centraliza a tabela na página e define margens */
+            background-color: #fff; /* Cor de fundo branca para a tabela */
+            border-radius: 8px; /* Borda arredondada na tabela */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave na tabela */
+        }
+    
+        #priceTable th, #priceTable td {
+            padding: 15px; /* Preenchimento interno das células da tabela */
+            text-align: center; /* Alinhamento central do texto nas células */
+            vertical-align: top; /* Alinhamento vertical no topo das células */
+        }
+    
+        #priceTable th {
+            background-color: #3498db; /* Cor de fundo azul para cabeçalho da tabela de preços */
+            color: white; /* Cor do texto branco para cabeçalho da tabela de preços */
+            border-radius: 8px 8px 0 0; /* Borda arredondada no topo do cabeçalho */
+        }
+    
+        #priceTable td {
+            border-right: 1px solid #ddd; /* Linha de borda direita nas células da tabela */
+            border-bottom: 1px solid #ddd; /* Linha de borda inferior nas células da tabela */
+        }
+    
+        #priceTable img {
+            max-width: 100px; /* Largura máxima da imagem dentro da tabela de preços */
+            max-height: 100px; /* Altura máxima da imagem dentro da tabela de preços */
+            border-radius: 50%; /* Borda arredondada para a imagem */
+            margin-bottom: 10px; /* Espaçamento inferior da imagem */
+        }
+    
+        /* Estilo para o layout de uma tabela de produtos em colunas (nova tabela) */
+        #columnProductTable {
+            width: 80%; /* Largura da tabela de produtos em colunas */
+            margin: 20px auto; /* Centraliza a tabela na página e define margens */
+            background-color: #fff; /* Cor de fundo branca para a tabela */
+            border-radius: 8px; /* Borda arredondada na tabela */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave na tabela */
+        }
+    
+        #columnProductTable th, #columnProductTable td {
+            padding: 15px; /* Preenchimento interno das células da tabela */
+            text-align: center; /* Alinhamento central do texto nas células */
+            vertical-align: top; /* Alinhamento vertical no topo das células */
+        }
+    
+        #columnProductTable th {
+            background-color: #e74c3c; /* Cor de fundo vermelha para cabeçalho da tabela de produtos em colunas */
+            color: white; /* Cor do texto branco para cabeçalho da tabela de produtos em colunas */
+            border-radius: 8px 8px 0 0; /* Borda arredondada no topo do cabeçalho */
+        }
+    
+        #columnProductTable td {
+            border-bottom: 1px solid #ddd; /* Linha de borda inferior nas células da tabela */
+        }
+    
+        #columnProductTable img {
+            max-width: 100px; /* Largura máxima da imagem dentro da tabela de produtos em colunas */
+            max-height: 100px; /* Altura máxima da imagem dentro da tabela de produtos em colunas */
+            border-radius: 50%; /* Borda arredondada para a imagem */
+            margin-bottom: 10px; /* Espaçamento inferior da imagem */
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Tabela 1 - Layout de Menu de Restaurante com Imagens -->
+    <table id="menuTable">
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Prato</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="salada.jpg" alt="Salada"></td>
+                <td>Entrada</td>
+                <td>Salada de Folhas Verdes</td>
+                <td>R$ 12.99</td>
+            </tr>
+            <tr>
+                <td><img src="frango.jpg" alt="Frango"></td>
+                <td>Prato Principal</td>
+                <td>Frango Grelhado com Legumes</td>
+                <td>R$ 18.99</td>
+            </tr>
+            <tr>
+                <td><img src="torta.jpg" alt="Torta"></td>
+                <td>Sobremesa</td>
+                <td>Torta de Chocolate</td>
+                <td>R$ 8.99</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tabela 2 - Layout de Tabela de Preços de Produtos com Imagens (Agora com 3 produtos por coluna, 4 linhas) -->
+    <table id="priceTable">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Imagem</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Laptop</td>
+                <td><img src="notebook.jpg" alt="Laptop"></td>
+                <td>Computador portátil com alta performance.</td>
+                <td>R$ 1000.00</td>
+            </tr>
+            <tr>
+                <td>Smartphone</td>
+                <td><img src="celular.jpg" alt="Smartphone"></td>
+                <td>Telefone inteligente com recursos avançados.</td>
+                <td>R$ 500.00</td>
+            </tr>
+            <tr>
+                <td>Tablet</td>
+                <td><img src="tablet.jpg" alt="Tablet"></td>
+                <td>Dispositivo portátil para entretenimento e produtividade.</td>
+                <td>R$ 800.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Tabela 3 - Layout de Tabela de Produtos em Colunas (nova tabela) -->
+    <table id="columnProductTable">
+        <thead>
+            <tr>
+                <th>Laptop</th>
+                <th>Smartphone</th>
+                <th>Tablet</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="notebook.jpg" alt="Laptop"></td>
+                <td><img src="celular.jpg" alt="Smartphone"></td>
+                <td><img src="tablet.jpg" alt="Tablet"></td>
+            </tr>
+            <tr>
+                <td>Computador portátil com alta performance.</td>
+                <td>Telefone inteligente com recursos avançados.</td>
+                <td>Dispositivo portátil para entretenimento e produtividade.</td>
+            </tr>
+            <tr>
+                <td>R$ 1000.00</td>
+                <td>R$ 500.00</td>
+                <td>R$ 800.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
